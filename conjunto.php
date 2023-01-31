@@ -141,18 +141,18 @@ class conjunto
         echo "<br>";
     }
 
-    public function Interseccion($Conjunto1, $Conjunto2)
+    public function Interseccion($Conjunto2)
     {
 
-        $Array1 = (array)$Conjunto1->arreglo;
+        $Array1 = (array)$this->arreglo;
         $Array2 = (array)$Conjunto2->arreglo;
         $Interseccion = [];
         $k = 0;
         $Contador = 0;
-        $tamaño = count($Conjunto1->arreglo) + count($Conjunto2->arreglo);
+        $tamaño = count($this->arreglo) + count($Conjunto2->arreglo);
         $Suma = [$tamaño];
 
-        for ($i = 0; $i < count($Conjunto1->arreglo); $i++) {
+        for ($i = 0; $i < count($this->arreglo); $i++) {
             $Suma[$i] = $Array1[$i];
             $Contador++;
         }
@@ -213,14 +213,14 @@ class conjunto
         echo "<br>";
     }
 
-    public function Diferencia($Conjunto1, $Conjunto2, $op)
+    public function Diferencia($Conjunto2, $op)
     {
 
 
-        $AUX1 = (array)$Conjunto1->arreglo;
+        $AUX1 = (array)$this->arreglo;
         $AUX2 = (array)$Conjunto2->arreglo;
 
-        $tamaño1 = count($Conjunto1->arreglo);
+        $tamaño1 = count($this->arreglo);
         $tamaño2 = count($Conjunto2->arreglo);
         $k = 0;
         $Resta = [];
@@ -255,18 +255,6 @@ class conjunto
         for ($i = 0; $i < $j; $i++) {
             unset($AUX1[$Posiciones[$i]]);
         }
-
-        /*echo "Arreglo Resta<br>";
-        for($i=0;$i<$k;$i++){
-            echo "$Resta[$i] ";
-        }
-        echo "<br>";
-
-        echo "Arreglo Posiciones<br>";
-        for($i=0;$i<=$j;$i++){
-            echo "$Posiciones[$i] ";
-        }
-        echo "<br>";*/
 
         $y = 0;
         $aux = 0;

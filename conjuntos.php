@@ -40,11 +40,13 @@
 
     echo "<br>";
 
-    $C1->Interseccion($C1,$C2);
+    //$C1->Interseccion($C1,$C2);
+    $C1->Interseccion($C2);
 
-    $C1->Diferencia($C1,$C2,1);
+    //$C1->Diferencia($C1,$C2,1);
+    $C1->Diferencia($C2,1);
 
-    $C2->Diferencia($C2,$C1,2);
+    $C2->Diferencia($C1,2);
     ?>
 
 </body>
